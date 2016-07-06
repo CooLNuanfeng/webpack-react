@@ -1,0 +1,27 @@
+@import "sassCore/_base.scss";
+
+body{
+    background: #f4f4f4;
+}
+
+h1{
+    color: red;
+    font-size: 30px;
+}
+
+.bg{
+    width: 500px;
+    height: 500px;
+}
+.bg1{
+    background: url('../image/pic1.jpg') center center no-repeat;
+}
+.bg2{
+    background: url('../image/pic2.jpg') center center no-repeat;
+}
+.bg3{
+    background: url('../image/react.jpg') center center no-repeat;
+}
+.bg4{
+    background: url('../image/blog.png') center center no-repeat;
+}

@@ -1,12 +1,10 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin"); // 将css单独打包
 module.exports = {
-    entry : ['webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:8080','./source/js/main.js'],
+    entry : './source/js/main.js',
     output : {
         path : './build/',
         filename : 'main.js',
-        //publicPath : './build/'  // 配置 scss 中 通过 url-loader 输出的文件路径
+        publicPath : '/assets/'  // 配置 输出的文件路径 网站运行时的路径 与 index.html 中的 http://localhost:8080/assets/对应
     },
     module : {
         loaders : [
@@ -20,7 +18,6 @@ module.exports = {
         extensions: ['', '.js','.jsx', '.json', '.scss','.css']
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin("styles.css")
     ]
 }

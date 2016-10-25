@@ -18,6 +18,6 @@ module.exports = {
         extensions: ['', '.js','.jsx', '.json', '.scss','.css']
     },
     plugins: [
-        new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin("css.css")
     ]
 }
